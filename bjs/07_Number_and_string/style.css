@@ -1,9 +1,30 @@
 .calc-row {
     height: 100vh;
     font-family: 'Share Tech Mono', monospace;
+    width: 215vh;
 }
 
 .input-window {
     text-align: end;
     font-size: x-large;
+}
+
+.btn-outline-primary {
+    background-color: lightskyblue;
+    color: black;
+}
+
+.btn-outline-danger {
+    background-color: #f74343;
+    color: black;
+}
+
+.card {
+    border: 300px;
+    background-color: black;
+}
+
+.btn-outline-primary {
+    height: 50px;
+    width: 100px;
 }
