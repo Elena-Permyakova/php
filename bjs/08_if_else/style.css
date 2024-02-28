@@ -2,3 +2,19 @@
     height: 100vh;
     font-family: 'Open Sans', monospace;
 }
+
+.btn-info {
+    background-color: yellow;
+    color: black;
+}
+
+.btn-link {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: brown;
+    color: rgb(255, 255, 255);
+}
+
+.m-0 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+}
