@@ -1,0 +1,15 @@
+.card-title {
+    background-color: rgb(113, 7, 212);
+    color: white;
+}
+
+.card-header {
+    border: 300px;
+    background-color: rgb(184, 7, 104);
+    color: white;
+}
+
+#firstNameOutput {
+    background-color: rgb(230, 28, 39);
+    color: white;
+}
