@@ -35,6 +35,21 @@ const personGenerator = {
             "id_10": "Андрей"
         }
     }`,
+    firstNameFemaleJson: `{
+        "count": 10,
+        "list": {     
+            "id_1": "Анастасия",
+            "id_2": "Марина",
+            "id_3": "Ирина",
+            "id_4": "Анна",
+            "id_5": "Оксана",
+            "id_6": "Наталья",
+            "id_7": "Мария",
+            "id_8": "Яна",
+            "id_9": "Елена",
+            "id_10": "Надежда"
+        }
+    }`,
 
     GENDER_MALE: 'Мужчина',
     GENDER_FEMALE: 'Женщина',
@@ -46,25 +61,47 @@ const personGenerator = {
         const prop = `id_${this.randomIntNumber(obj.count, 1)}`;  // this = personGenerator
         return obj.list[prop];
     },
-
+    randomGender: function() {
+        gender = [this.GENDER_MALE,this.GENDER_FEMALE];
+        randomG = Math.round(Math.random()*(gender.length-1));
+        console.log(gender[randomG]);
+        pol = gender[randomG];
+        return pol;
+        
+    }, 
+            
     randomFirstName: function() {
+        console.log(pol);
+        if (pol === this.GENDER_MALE){
+            return this.randomValue(this.firstNameMaleJson);            
+        }
+        else {
+            return this.randomValue(this.firstNameFemaleJson);
+        }
+    },    
 
-        return this.randomValue(this.firstNameMaleJson);
+    randomSurname: function() {
+        console.log(pol);
+        if (pol === this.GENDER_MALE){
+            return this.randomValue(this.surnameJson);            
+        }
+        else {
+            return this.randomValue(this.surnameJson) + 'а';
+        }
+    }, 
 
-    },
-
-
-     randomSurname: function() {
-
-        return this.randomValue(this.surnameJson);
-
-    },
-
+    randomYear: function() {
+       let year = 1960 + Math.round(Math.random()*65);
+        return year;
+    }, 
 
     getPerson: function () {
-        this.person = {};
-        // this.person.gender = this.randomGender();
-        this.person.firstName = this.randomFirstName();
+        this.person = {}; // Появление личности;
+        this.person.gender = this.randomGender(); // Подбор пола;
+        this.person.surname = this.randomSurname(); //failiya
+        this.person.firstName = this.randomFirstName(); // Подбор имени;
+        this.person.year = this.randomYear(); //godrozdenia
         return this.person;
     }
+
 };
